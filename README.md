@@ -1,1 +1,1 @@
-# qa-quru-python-training
+# qa_guru_python_training
