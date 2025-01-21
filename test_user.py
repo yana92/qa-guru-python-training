@@ -3,8 +3,8 @@ import requests
 
 from pytest import mark
 
-# base_url = "https://reqres.in"
-base_url = "http://0.0.0.0:8000"
+base_url = "https://reqres.in"
+# base_url = "http://0.0.0.0:8000"
 
 
 @pytest.mark.parametrize("user_id, expected_email", [
@@ -26,7 +26,7 @@ def test_get_user(user_id, expected_email):
     assert "support" in result, "В ответе не вернулся объект support"
 
 
-@mark.parametrize('user_id', [3])
+@mark.parametrize('user_id', [0])
 def test_get_user_not_found(user_id):
     """Тест неуспешного запроса /api/users/{user_id}. Пользователь не найден."""
     url = f"{base_url}/api/users/{user_id}"
